@@ -1,0 +1,374 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --th-color: #da0202;
+    --bg-gradient: radial-gradient(circle, #ff0000, #910101, #500101); 
+    --primary-color: #e4bcbc;
+    --p-primary-color: #388E3C;
+    --accent-color: gold;
+    --snow-color: white;
+
+}
+
+html{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-gradient);
+    height: 100vh;
+    overflow-x: hidden;
+ 
+}
+
+.snowflake {
+    position: absolute;
+    color: var(--snow-color);
+    font-size: 1em;
+    animation: fall infinite linear;
+  }
+
+
+  @keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+
+header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    margin: 2% 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100%;
+    padding: 10px 20px;
+    
+}
+
+
+
+
+header img{
+    width: 100px;
+}
+
+.counter{
+    display: none;
+    margin-right: 20px;
+}
+
+.countdown h3{
+    text-align: center;
+    color: var(--primary-color);
+    font-family: cursive;
+    font-size: 1.7em;
+}
+
+
+.countdown h2{
+    text-align: center;
+    color: var(--primary-color);
+    font-family: cursive;
+    font-size: 2em;
+    font-weight: bold;
+    border-right: 2px solid white; /* Blinking cursor */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide the overflowing text */
+    width: 0; /* Start with no width (hidden) */
+    animation: typing 20s steps(100, end) infinite, display 20s ease-in-out infinite;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+@keyframes typing {
+    0% {
+      width: 0; /* Start with no visible text */
+    }
+    60% {
+      width: 15ch; /* Reset the width to 0 to start typing again */
+    }
+
+    100% {
+        width: 15ch; /* Reset the width to 0 to start typing again */
+      }
+  }
+
+  @keyframes display {
+    0%, 50% {
+      opacity: 1; /* Make the text fully visible */
+    }
+    60%, 100% {
+      opacity: 1; /* Fade out the text */
+    }
+  }
+
+nav{
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+
+nav .nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav a{
+    margin: 0 15px;
+    color: var(--accent-color);
+    font-family: cursive;
+    font-weight: 800;
+    font-size: 1.5em;
+    padding: 5px 8px;
+    border-radius: 10px;
+    transition: linear .3s;
+}
+
+nav a:hover{
+    color: var(--th-color);
+    background-color: var(--primary-color);
+    
+}
+
+main{
+    width: 100%;
+    position: relative;
+
+}
+
+.hero_banner{
+
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 20px;
+
+
+}
+
+
+.text_data{
+    width: 50%;
+    
+}
+
+
+.hero_text{
+    margin-right: 2px;
+}
+
+#santa{
+    width: 70%;
+    border-radius: 10px; /* Optional: Rounded corners */
+    margin: 20px auto; /* Centering (optional) */
+}
+
+
+
+#day_hero{
+    font-size: 4em;
+}
+
+#to_hero{
+    font-size: 5em;
+    color: var(--accent-color);
+}
+
+.user_data{
+    width: 80%;
+    height: 90%;
+    background-image: url('bgscroll.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form{   
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    
+    
+}
+
+label{
+    width: 70%;
+    color: var(--th-color);
+    font-size: 1.7em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px var(--accent-color);
+    font-family: cursive;
+    
+}
+
+input{
+    width: 100%;
+    color: var(--th-color);
+    font-size: 1.7em;
+    font-weight: bold;
+    font-family: cursive;
+    text-align: center;
+    border-radius: 12px;
+    margin: 20px 0;
+
+}
+
+#submit{
+    background-color: var(--th-color);
+    color: var(--accent-color);
+    margin: 0 15px;
+    font-family: cursive;
+    font-weight: 800;
+    font-size: 1.5em;
+    padding: 5px 8px;
+    border-radius: 10px;
+    transition: linear .3s;
+}
+
+#submit:hover{
+    background-color: var(--primary-color);
+    color: var(--th-color);
+    text-shadow: 2px 3px 5px var(--accent-color);
+    
+}
+
+@media (max-width:1300px){
+    form{
+        width: 90%;
+    }
+
+    label{
+        width: 70%;
+    }
+
+
+}
+
+
+@media (max-width:1200px) {
+    header img{
+        width: 80px;
+    }
+
+    #day_hero{
+        font-size: 2.5em;
+    }
+    
+    #to_hero{
+        font-size: 3em;
+   
+    }
+
+    #santa{
+        width: 60%;
+
+    }
+
+    .user_data{
+        line-height: 40px;
+    }
+
+    
+
+}
+
+@media (max-width: 855px){
+    
+    .hero_banner{
+        display: flex;
+        justify-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .counter{
+        display: block;
+    }
+    #santa{
+        width: 100%;
+    }
+
+    .hero_text{
+        display: none;
+    }
+
+    header{
+        flex-direction: column;
+
+    }
+
+    .logo{
+        width: 100%;
+        display: flex;
+         align-items: center;
+         justify-content: space-between;
+         
+    }
+
+    nav{
+        width: 100%;
+        margin: 20px 0;
+
+    }
+
+    nav .nav-links{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+
+    nav a{
+        
+        font-size: 1.2em;
+    }
+    
+
+    .text_data{
+        width: 100%;
+    }
+
+
+    .user_data{
+        width: 100;
+        
+    }
+
+    form{
+        
+    }
+}
+ 

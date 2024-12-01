@@ -264,19 +264,48 @@ footer{
 }
 
 .support{
+    width: 90%;
+    margin: 40px auto;
+}
 
+.support h2{
+    font-size: 1.7em;
+    font-family: cursive;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.support ul{
+    list-style: none;
+}
+
+.support ul li span{
+    font-family: cursive;
+    font-weight: bold;
+
+    
+}
+
+.support p span{
+    font-size: 1em;
+    font-family: cursive;
+    color: var(--accent-color);
 }
 
 .support ul li, .support p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     color: var(--primary-color);
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 600;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     overflow-wrap: break-word; /* Ensures long words break */
     word-wrap: break-word; /* For older browser support */
     line-height: 40px;
+    text-shadow: 1px 1px 2px black;
 }
+
+
 
 
 .social{
@@ -291,12 +320,46 @@ footer{
     font-size: 1.7em;
     color: var(--primary-color);
     transition: .4s linear;
+    text-shadow: 
+    0 0 5px rgb(255, 61, 2),  /* Inner green glow */
+    0 0 10px rgb(255, 30, 0), /* Middle green glow */
+    0 0 15px rgb(255, 10, 0), /* Outer green glow */
+    0 0 25px rgb(255, 0, 0); /* Extended green glow */
+animation: glow 5s infinite alternate;
 }
 
 
 .social i:hover{
     transform: scale(1.4);
 }
+
+
+
+/* Glowing Animation */
+@keyframes glow {
+    0% {
+        text-shadow: 
+            0 0 5px var(--accent-color), 
+            0 0 10px var(--accent-color), 
+            0 0 15px var(--accent-color), 
+            0 0 25px var(--accent-color);
+    }
+    50% {
+        text-shadow: 
+            0 0 5px var(--th-color), /* Transition to white glow */
+            0 0 10px var(--th-color), 
+            0 0 15px var(--th-color), 
+            0 0 25px var(--th-color);
+    }
+    100% {
+        text-shadow: 
+            0 0 5px #00ff00, 
+            0 0 10px #00ff00, 
+            0 0 15px #00ff00, 
+            0 0 25px #00ff00;
+    }
+}
+
  
 
 

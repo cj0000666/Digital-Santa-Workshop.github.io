@@ -44,6 +44,13 @@ body{
     }
   }
 
+#intro_flowe{
+    position: fixed;
+    top: -3%;
+    right: -3%;
+    visibility: hidden;
+}
+
 header{
    
     top: 10px;
@@ -375,11 +382,12 @@ footer{
 }
 
 .support h2{
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: 'Brush Script';
     color: var(--accent-color);
     text-align: center;
     text-shadow: 0 0 3px var(--th-color);
+    font-weight: 400;
 }
 
 .support ul{
@@ -404,7 +412,7 @@ footer{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     color: var(--th-color);
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 400;
     font-family: 'Brush Script';
     overflow-wrap: break-word; /* Ensures long words break */
@@ -548,6 +556,10 @@ animation: glow 5s infinite alternate;
 }
 
 @media (max-width: 855px){
+
+    #intro_flowe{
+        visibility: visible;
+    }
 
     header img{
         display: none;
@@ -754,6 +766,20 @@ animation: glow 5s infinite alternate;
 
     .jesus_facts .santa_show{
         display: none;
+    }
+
+    .facts h1{
+        font-size: 2em;
+    }
+
+
+    .facts .fact h2{
+        font-size: 1.4em;
+    }
+
+
+    .facts .fact p{
+        font-size: 1em;
     }
 
 }

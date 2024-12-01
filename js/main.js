@@ -93,17 +93,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create and display the greeting message
 const greetingLabel = document.createElement('div'); // Use a div for flexibility
 greetingLabel.innerHTML = `
-    <h2 style="color: #e63946; font-family: cursive; margin-top: 20px;">
+    <h2 font-family: cursive; margin-top: 20px;">
         Well, ${userName}, I Checked My List and You’re on the Nice List! 🎄
     </h2>
-    <p style="font-size: 1.2em; color: #555;">
+    <p style="font-size: 1.2em;">
         While I work my holiday magic, I want to wish you the best of luck! Remember,
          Christmas is all about joy, love, and the spirit of giving. No matter what,
           you're already a winner in my eyes for spreading the holiday cheer! 🎁
 
 
     </p>
-    <p style="font-style: italic; color: #777;">
+    <p style="font-style: italic; font-size: 2em;">
         Stay tuned to see if you’re the lucky giveaway winner!
     </p>
 `;

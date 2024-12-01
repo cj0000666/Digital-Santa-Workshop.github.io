@@ -191,7 +191,7 @@ main{
 }
 
 .user_data{
-    width: 80%;
+    width: 100%;
     height: 90%;
     background-image: url('bgscroll.jpg');
     background-size: cover;
@@ -208,7 +208,7 @@ main{
 
 
 form{   
-    width: 50%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -216,11 +216,11 @@ form{
     
 }
 
-.user_data h1, .user_data h3 {
+.user_data h1, .user_data h1, .user_data h2, .user_data p{
     margin-top: 20px;
     color: var(--th-color);
     font-family:cursive;
-    text-shadow: 0 0 1px rgb(255, 255, 255);
+    text-shadow: 0 0 1px rgb(0, 0, 0);
     font-weight: bold;
 }
 
@@ -275,6 +275,16 @@ select, input{
 }
 
 
+.first, .second{
+    border: outset 2px var(--primary-color);
+    height: 100%;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+
 .fun_facts .first{
     width: 45%;
 }
@@ -301,7 +311,7 @@ select, input{
 .second div{
     width: 50%;
     line-height: 50px;
-    padding: 40px 10px;
+    padding: 10px 10px;
 }
 
 .first div , .second div{
@@ -309,14 +319,16 @@ select, input{
     color: var(--th-color);
     font-family: cursive;
     background-image: url('bgscroll.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
+
 
 }
 
 .fun_facts h3{
     font-size: 2em;
+    font-family: cursive;
+    color: black;
+    text-shadow: 0 0 4px var(--primary-color);
+    font-weight: bold;
 }
 
 .fun_facts h4{
@@ -324,13 +336,21 @@ select, input{
 }
 
 .fun_facts ul{
-    list-style: none1.4
+    padding: 10px 30px;
 
 }
 
-.fun_facts ul{
+.fun_facts li{
     font-size: 1.5em;
     padding: 7px 0;
+    font-weight: bold;
+}
+
+.fun_facts li span{
+    font-size: 1.2em;
+    padding: 7px 0;
+    font-weight: bold;
+    color: black;
 }
 
 footer{
@@ -341,6 +361,11 @@ footer{
 .support{
     width: 90%;
     margin: 40px auto;
+    text-align: center;
+    font-family: cursive;
+    background-image: url('bgscroll.jpg');
+    border: outset 2px var(--primary-color);
+    border-radius: 15px;
 }
 
 .support h2{
@@ -348,6 +373,7 @@ footer{
     font-family: cursive;
     color: var(--accent-color);
     text-align: center;
+    text-shadow: 0 0 3px var(--th-color);
 }
 
 .support ul{
@@ -365,19 +391,20 @@ footer{
     font-size: 1em;
     font-family: cursive;
     color: var(--accent-color);
+    text-shadow: 0 0 3px var(--th-color), 0 0 5px rgb(3, 3, 3);
 }
 
 .support ul li, .support p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    color: var(--primary-color);
-    font-size: 1.2em;
+    color: var(--th-color);
+    font-size: 1.3em;
     font-weight: 600;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     overflow-wrap: break-word; /* Ensures long words break */
     word-wrap: break-word; /* For older browser support */
     line-height: 40px;
-    text-shadow: 1px 1px 2px black;
+    text-shadow: 0 0 2px black;
 }
 
 

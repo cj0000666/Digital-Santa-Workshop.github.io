@@ -96,7 +96,7 @@ greetingLabel.innerHTML = `
     <h2 font-family: cursive; margin-top: 20px;">
         Well, ${userName}, I Checked My List and You’re on the Nice List! 🎄
     </h2>
-    <p style="font-size: 1.2em;">
+    <p style="font-size: 1.7em;">
         While I work my holiday magic, I want to wish you the best of luck! Remember,
          Christmas is all about joy, love, and the spirit of giving. No matter what,
           you're already a winner in my eyes for spreading the holiday cheer! 🎁

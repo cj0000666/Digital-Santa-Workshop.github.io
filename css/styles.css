@@ -9,7 +9,6 @@
     --th-color: #da0202;
     --bg-gradient: radial-gradient(circle, #ff0000, #910101, #500101); 
     --primary-color: #e4bcbc;
-    --p-primary-color: #388E3C;
     --accent-color: gold;
     --snow-color: white;
 
@@ -18,24 +17,20 @@
 html{
     overflow-x: hidden;
     overflow-y: scroll;
-    
 
 }
 
 body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
     background: var(--bg-gradient);
     height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden;     
  
 }
 
 .snowflake {
     position: absolute;
     color: var(--snow-color);
-    font-size: 1em;
+    font-size: .8em;
     animation: fall infinite linear;
   }
 
@@ -50,11 +45,11 @@ body{
   }
 
 header{
-    position: fixed;
-    top: 0px;
+   
+    top: 10px;
     left: 0px;
     width: 100%;
-    margin: 2% 10px;
+    margin: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,8 +57,6 @@ header{
     padding: 10px 20px;
     
 }
-
-
 
 
 header img{
@@ -142,7 +135,7 @@ nav a{
     font-family: cursive;
     font-weight: 800;
     font-size: 1.5em;
-    padding: 5px 8px;
+    padding: 5px 4px;
     border-radius: 10px;
     transition: linear .3s;
 }
@@ -160,8 +153,6 @@ main{
 }
 
 .hero_banner{
-
-    margin-top: 10%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -185,7 +176,7 @@ main{
 #santa{
     width: 70%;
     border-radius: 10px; /* Optional: Rounded corners */
-    margin: 20px auto; /* Centering (optional) */
+    margin: 5px auto; /* Centering (optional) */
 }
 
 
@@ -265,6 +256,50 @@ input{
     
 }
 
+
+
+footer{
+    margin: 5% 0;
+
+}
+
+.support{
+
+}
+
+.support ul li, .support p {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1em;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-wrap: break-word; /* Ensures long words break */
+    word-wrap: break-word; /* For older browser support */
+    line-height: 40px;
+}
+
+
+.social{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+.social i{
+    font-size: 1.7em;
+    color: var(--primary-color);
+    transition: .4s linear;
+}
+
+
+.social i:hover{
+    transform: scale(1.4);
+}
+ 
+
+
 @media (max-width:1300px){
     form{
         width: 90%;
@@ -272,6 +307,10 @@ input{
 
     label{
         width: 70%;
+    }
+
+    nav a{
+        margin: 0 5px;
     }
 
 
@@ -284,7 +323,7 @@ input{
     }
 
     #day_hero{
-        font-size: 2.5em;
+        font-size: 2.10em;
     }
     
     #to_hero{
@@ -306,6 +345,10 @@ input{
 }
 
 @media (max-width: 855px){
+
+    header img{
+        display: none;
+    }
     
     .hero_banner{
         display: flex;
@@ -316,6 +359,10 @@ input{
     
     .counter{
         display: block;
+        width: 100%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
     #santa{
         width: 100%;
@@ -367,8 +414,5 @@ input{
         
     }
 
-    form{
-        
-    }
+
 }
- 

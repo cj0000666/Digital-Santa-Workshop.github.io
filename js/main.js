@@ -13,8 +13,8 @@ function updateCountdown() {
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-        countdownday.textContent=`${days} Days     ${hours} Hours   ${minutes} Mins     ${seconds} Secs`
-        countdownday_hero.textContent=`${days} Days     ${hours} Hours   ${minutes} Mins     ${seconds} Secs`
+        countdownday.textContent=`${days} DAYS     ${hours} HOURS   ${minutes} MINS     ${seconds} SECS`
+        countdownday_hero.textContent=`${days} DAYS     ${hours} HOURS   ${minutes} MINS     ${seconds} SECS`
       }
   
       
@@ -53,6 +53,32 @@ function createSnowflake() {
 setInterval(createSnowflake, 100); // Create a new snowflake every 100ms
 
 
+
+function change_greeting_label() {
+    const greeting_label = document.querySelector("#user_label");
+    const user_input = document.querySelector("#user");
+    const submit_button = document.querySelector("#submit");
+
+    submit_button.onclick = function(event) {
+        // Prevent default form submission (if inside a form)
+        event.preventDefault();
+
+        // Get the value from the input field
+        const user_input_value = user_input.value;
+
+        // Update the label with the input value
+        greeting_label.textContent = `Well, ${user_input_value}, I Checked My List and You’re on the Nice List! Have a Joyful Christmas and a Magical Holiday Season! 🎄🎁`;
+
+        // Hide the input field
+        user_input.style.display = "none";
+
+        // Hide the submit button as well (optional)
+        submit_button.style.display = "none";
+    };
+}
+
+// Call the function to set up the event
+change_greeting_label();
 
 
 

@@ -73,7 +73,7 @@ header img{
 .countdown h3{
     text-align: center;
     color: var(--primary-color);
-    font-family: cursive;
+    font-family: 'Brush Script';
     font-size: 1.7em;
 }
 
@@ -81,9 +81,9 @@ header img{
 .countdown h2{
     text-align: center;
     color: var(--primary-color);
-    font-family: cursive;
-    font-size: 2em;
-    font-weight: bold;
+    font-family: 'Brush Script';
+    font-size: 1.5em;
+    font-weight: 600;
     border-right: 2px solid white; /* Blinking cursor */
     white-space: nowrap; /* Prevent text wrapping */
     overflow: hidden; /* Hide the overflowing text */
@@ -175,6 +175,8 @@ main{
     margin-right: 2px;
 }
 
+
+
 #santa{
     width: 75%;
     border-radius: 10px; /* Optional: Rounded corners */
@@ -184,11 +186,11 @@ main{
 
 
 #day_hero{
-    font-size: 4em;
+    font-size: 2.5em;
 }
 
 #to_hero{
-    font-size: 5em;
+    font-size: 3em;
     color: var(--accent-color);
 }
 
@@ -319,7 +321,7 @@ select, input{
 .first div , .second div{
     text-align: center;
     color: var(--th-color);
-    font-family: cursive;
+    font-family: 'Brush Script';
     background-image: url('bgscroll.jpg');
 
 
@@ -327,7 +329,7 @@ select, input{
 
 .fun_facts h3{
     font-size: 2em;
-    font-family: cursive;
+    font-family: 'Brush Script';
     color: black;
     text-shadow: 0 0 4px var(--primary-color);
     font-weight: bold;
@@ -346,6 +348,7 @@ select, input{
     font-size: 1.5em;
     padding: 7px 0;
     font-weight: bold;
+    font-family: cursive;
 }
 
 .fun_facts li span{
@@ -353,6 +356,7 @@ select, input{
     padding: 7px 0;
     font-weight: bold;
     color: black;
+    font-family: 'Brush Script';
 }
 
 footer{
@@ -364,15 +368,15 @@ footer{
     width: 90%;
     margin: 40px auto;
     text-align: center;
-    font-family: cursive;
+    font-family: 'Brush Script';
     background-image: url('bgscroll.jpg');
     border: outset 2px var(--primary-color);
     border-radius: 15px;
 }
 
 .support h2{
-    font-size: 1.7em;
-    font-family: cursive;
+    font-size: 1.5em;
+    font-family: 'Brush Script';
     color: var(--accent-color);
     text-align: center;
     text-shadow: 0 0 3px var(--th-color);
@@ -384,14 +388,14 @@ footer{
 
 .support ul li span{
     font-family: cursive;
-    font-weight: bold;
+    font-weight: 600;
 
     
 }
 
 .support p span{
     font-size: 1em;
-    font-family: cursive;
+    font-family: 'Brush Script';
     color: var(--accent-color);
     text-shadow: 0 0 3px var(--th-color), 0 0 5px rgb(3, 3, 3);
 }
@@ -400,14 +404,15 @@ footer{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
     color: var(--th-color);
-    font-size: 1.3em;
-    font-weight: 600;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    font-family: 'Brush Script';
     overflow-wrap: break-word; /* Ensures long words break */
     word-wrap: break-word; /* For older browser support */
     line-height: 40px;
     text-shadow: 0 0 2px black;
 }
+
 
 
 
@@ -421,7 +426,7 @@ footer{
 }
 
 .social i{
-    font-size: 1.7em;
+    font-size: 1.4em;
     color: var(--primary-color);
     transition: .4s linear;
     text-shadow: 
@@ -507,26 +512,30 @@ animation: glow 5s infinite alternate;
 
     }
 
+    #to_hero{
+        font-size: 2em;
+    }
+
 
 }
 
 
 @media (max-width:1200px) {
     header img{
-        width: 80px;
+        width: 10px;
     }
 
     #day_hero{
-        font-size: 2.10em;
+        font-size: 2em;
     }
     
     #to_hero{
-        font-size: 3em;
+        font-size: 1.8em;
    
     }
 
     #santa{
-        width: 60%;
+        width: 80%;
 
     }
 
@@ -624,5 +633,127 @@ animation: glow 5s infinite alternate;
         width: 100%;
     }
 
+
+}
+
+
+
+/* CHRISTMAS CSS STARTS HERE*/
+
+.jesus_facts {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 800px;
+    gap: 20px; /* Adds space between the two sections */
+    padding: 20px 2%;
+    
+}
+
+#phone_santa{
+    display: none;
+}
+
+.jesus_facts .facts {
+    width: 45%;
+    height: 100%; /* Ensures it fills the available height */
+    overflow-y: auto; /* Enables scrolling */
+    padding: 10px; /* Adds padding for readability */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow */
+    
+    border-radius: 12px;
+    
+ 
+}
+
+
+
+
+.jesus_facts .santa_show {
+    width: 45%;
+    height: 100%;
+    overflow: hidden; /* Ensures content does not scroll */
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+
+}
+
+.jesus_facts .santa_show img {
+    max-width: 100%; /* Ensures the image fits within the container width */
+    max-height: 100%; /* Ensures the image fits within the container height */
+    object-fit: contain; /* Keeps the image aspect ratio */
+}
+
+.facts h1{
+    text-align: center;
+    font-family: cursive;
+    font-size: 3em;
+    text-shadow: 0 0 2px rgb(150, 147, 147);
+}
+
+
+.facts .fact{
+    width: 80%;
+    margin: 15px auto;
+
+}
+
+.facts .fact h2{
+    font-family: "Brush Script";
+    font-size: 1.7em;
+    padding: 20px 0;
+    text-shadow: 0 0 2px rgb(150, 147, 147);
+    
+}
+
+
+.facts .fact h2 span{
+    display: inline-block;
+    border: outset 2px var(--accent-color);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 5px;
+    padding-left: 5px;
+    box-shadow: 0 0 6px white;
+    
+}
+
+
+.facts .fact p{
+    font-family: "Brush Script";
+    font-size: 1.2em;
+    padding: 20px 0;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.7em;
+    color: var(--accent-color);
+    text-shadow: 0 0 4px rgb(0, 0, 0);
+}
+
+
+@media (max-width:1100px){
+
+    .jesus_facts {
+        flex-direction: column;
+        height: 120vh;
+    }
+
+
+    .jesus_facts #phone_santa{
+        display: block;
+        width: 100%;
+    }
+
+    .jesus_facts .facts{
+        width: 100%;
+    }
+
+    .jesus_facts .santa_show{
+        display: none;
+    }
 
 }

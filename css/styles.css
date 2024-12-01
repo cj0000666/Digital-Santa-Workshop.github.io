@@ -174,7 +174,7 @@ main{
 }
 
 #santa{
-    width: 70%;
+    width: 75%;
     border-radius: 10px; /* Optional: Rounded corners */
     margin: 5px auto; /* Centering (optional) */
 }
@@ -206,6 +206,7 @@ main{
     margin-right: auto;
 }
 
+
 form{   
     width: 50%;
     margin-left: auto;
@@ -215,32 +216,40 @@ form{
     
 }
 
-label{
-    width: 70%;
+.user_data h1, .user_data h3 {
+    margin-top: 20px;
     color: var(--th-color);
-    font-size: 1.7em;
+    font-family:cursive;
+    text-shadow: 0 0 1px rgb(255, 255, 255);
     font-weight: bold;
-    text-shadow: 2px 2px 5px var(--accent-color);
+}
+
+.user_data h1{
+    padding-top: 30px;
+    font-size: 1.4em;
+}
+label, select, input, button {
+    margin: 10px 0;
     font-family: cursive;
+}
+
+label{
+    font-size: 1.4em;
+    width: 40%;
+    text-align: center;
     
 }
 
-input{
-    width: 100%;
-    color: var(--th-color);
-    font-size: 1.7em;
-    font-weight: bold;
-    font-family: cursive;
-    text-align: center;
-    border-radius: 12px;
-    margin: 20px 0;
-
+select, input{
+    font-size: 1.3em;
+    padding: 5px 10px;
 }
+
 
 #submit{
     background-color: var(--th-color);
     color: var(--accent-color);
-    margin: 0 15px;
+    margin: 20px 15px;
     font-family: cursive;
     font-weight: 800;
     font-size: 1.5em;
@@ -257,6 +266,72 @@ input{
 }
 
 
+.fun_facts{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+.fun_facts .first{
+    width: 45%;
+}
+
+
+.fun_facts .second{
+    width: 45%;
+    
+    display: flex;
+    align-items: flex-start;
+    gap: 2%;
+}
+
+.fun_facts .first img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.fun_facts .second img{
+    width: 37%;
+}
+
+.second div{
+    width: 50%;
+    line-height: 50px;
+    padding: 40px 10px;
+}
+
+.first div , .second div{
+    text-align: center;
+    color: var(--th-color);
+    font-family: cursive;
+    background-image: url('bgscroll.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+
+}
+
+.fun_facts h3{
+    font-size: 2em;
+}
+
+.fun_facts h4{
+    font-size: 1.4em;
+}
+
+.fun_facts ul{
+    list-style: none1.4
+
+}
+
+.fun_facts ul{
+    font-size: 1.5em;
+    padding: 7px 0;
+}
 
 footer{
     margin: 5% 0;
@@ -360,6 +435,23 @@ animation: glow 5s infinite alternate;
     }
 }
 
+
+@media (max-width:1800px){
+    .second{
+        flex-direction: column;
+    }
+    .second div{
+        line-height: 33px;
+        padding: 10px 5px;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .second img{
+        margin: 5px auto;
+        width: 27%;
+    }
+}
  
 
 
@@ -374,6 +466,16 @@ animation: glow 5s infinite alternate;
 
     nav a{
         margin: 0 5px;
+    }
+
+
+    .second img{
+        width: 37%;
+    }
+
+    .second div{
+        line-height: 30px;
+
     }
 
 
@@ -475,6 +577,22 @@ animation: glow 5s infinite alternate;
     .user_data{
         width: 100;
         
+    }
+
+    .fun_facts{
+        flex-direction: column;
+        width: 100%;
+        margin-top: 7%;
+        
+    }
+
+    .fun_facts .first, .fun_facts .second{
+        width: 85%;
+        margin: 30px 0;
+    }
+
+    .fun_facts img, .fun_facts div{
+        width: 100%;
     }
 
 

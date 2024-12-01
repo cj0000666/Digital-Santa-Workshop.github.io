@@ -54,31 +54,79 @@ setInterval(createSnowflake, 100); // Create a new snowflake every 100ms
 
 
 
-function change_greeting_label() {
-    const greeting_label = document.querySelector("#user_label");
-    const user_input = document.querySelector("#user");
-    const submit_button = document.querySelector("#submit");
 
-    submit_button.onclick = function(event) {
-        // Prevent default form submission (if inside a form)
-        event.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('giveaway-form');
+    const payoutOptions = form.querySelectorAll('input[name="payout"]');
+    const paypalEmail = form.querySelector('input[name="paypal_email"]');
+    const cryptoType = form.querySelector('select[name="crypto_type"]');
+    const wallet = form.querySelector('input[name="wallet"]');
+    const container = document.querySelector('#form-container');
 
-        // Get the value from the input field
-        const user_input_value = user_input.value;
+    let csvData = [["Name", "Payout Method", "Details"]]; // CSV header
 
-        // Update the label with the input value
-        greeting_label.textContent = `Well, ${user_input_value}, I Checked My List and You’re on the Nice List! Have a Joyful Christmas and a Magical Holiday Season! 🎄🎁`;
+    // Manage form inputs based on payout selection
+    payoutOptions.forEach(option => {
+        option.addEventListener('change', () => {
+            const isPayPal = option.value === 'paypal';
+            paypalEmail.disabled = !isPayPal;
+            cryptoType.disabled = isPayPal;
+            wallet.disabled = isPayPal;
+        });
+    });
 
-        // Hide the input field
-        user_input.style.display = "none";
+    // Handle form submission
+    form.addEventListener('submit', e => {
+        e.preventDefault();
 
-        // Hide the submit button as well (optional)
-        submit_button.style.display = "none";
-    };
-}
+        // Collect user data
+        const userName = form.querySelector('input[name="name"]').value;
+        const payoutMethod = form.querySelector('input[name="payout"]:checked').value;
+        const payoutDetails = payoutMethod === "paypal" 
+            ? paypalEmail.value 
+            : `${cryptoType.value}, ${wallet.value}`;
 
-// Call the function to set up the event
-change_greeting_label();
+        // Add user data to CSV array
+        csvData.push([userName, payoutMethod, payoutDetails]);
+
+        // Create and display the greeting message
+        // Create and display the greeting message
+const greetingLabel = document.createElement('div'); // Use a div for flexibility
+greetingLabel.innerHTML = `
+    <h2 style="color: #e63946; font-family: cursive; margin-top: 20px;">
+        Well, ${userName}, I Checked My List and You’re on the Nice List! 🎄
+    </h2>
+    <p style="font-size: 1.2em; color: #555;">
+        While I work my holiday magic, I want to wish you the best of luck! Remember,
+         Christmas is all about joy, love, and the spirit of giving. No matter what,
+          you're already a winner in my eyes for spreading the holiday cheer! 🎁
 
 
+    </p>
+    <p style="font-style: italic; color: #777;">
+        Stay tuned to see if you’re the lucky giveaway winner!
+    </p>
+`;
+container.appendChild(greetingLabel); // Add the message to the container
 
+
+        // Hide the form
+        form.style.display = 'none';
+
+        // Generate the CSV file
+        generateCSV(csvData);
+    });
+
+    // Function to generate and download a CSV file
+    function generateCSV(data) {
+        const csvContent = data.map(row => row.join(",")).join("\n");
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'santa_giveaway.csv';
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+});

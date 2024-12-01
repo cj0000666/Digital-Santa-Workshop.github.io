@@ -59,17 +59,85 @@
 
                 </div>
 
-                <div class="user_data">
-                    <form action="">
-                        <label for="user" id="user_label">Hey! What’s your name?<br> Santa wants to send you a personalized greeting!</label><br>
-                        <input type="text" placeholder="Mary" id="user">
-
-                        <button id="submit">Hello Santa</button>
+                <div class="user_data" id="form-container">
+                    <h1>Ho ho ho! Hello, dear friend! 🎅 It's Santa here with my magical Good Book. Let’s see if your name is on the Nice List this year! 
+                        Enter how you'd like to receive your gift, and good luck! 🎄✨</h1>
+                    <form id="giveaway-form">
+                        <label>Name:</label>
+                        <input type="text" name="name" placeholder="Your Name" required><br>
+                        
+                        <h3>Preferred Payout:</h3>
+                        <label for="paypal">PayPal</label>
+                        <input type="radio" name="payout" value="paypal" required> 
+                        <input type="email" name="paypal_email" placeholder="PayPal Email" disabled><br>
+                        
+                        <label for="crypto">Crypto</label>
+                        <input type="radio" name="payout" value="crypto" required> 
+                        <select name="crypto_type" disabled>
+                            <option value="btc">Bitcoin</option>
+                            <option value="eth">Ethereum</option>
+                        </select>
+                        <input type="text" name="wallet" placeholder="Wallet Address" disabled><br>
+                        
+                        <button type="submit" id="submit">Submit</button>
                     </form>
 
                 </div>
 
+
             </div>
+
+        </div>
+
+
+
+        
+
+        <div class="fun_facts">
+
+
+            <div class="first">
+                <img src="imagies/b_tre.png" alt="">
+
+                <div class="fact_">
+                    <h3>The Guinness World Record for the largest Christmas tree is held by a
+                         light display on Mount Ingino in Gubbio, Italy.
+                          It spans over 1,300 feet tall!</h3>
+                    <h4>The enchanting town of Gubbio, Italy, lights up each holiday season with a dazzling
+                         spectacle that holds the Guinness World Record for the largest Christmas tree. 
+                        This extraordinary creation isn’t a traditional tree but a massive light display 
+                        shaped like one, stretching over 1,300 feet tall on the slopes of Mount Ingino.</h4>
+
+                        <ul>
+                            <li>Illuminated Brilliance: Over 700 colorful lights form the tree, glowing beautifully against the mountain.</li>
+                            <li>A Tradition of Joy: First lit in 1981, this unique tree has become a beloved symbol of Christmas spirit.</li>
+                            <li>Global Attention: Visible from miles away, it attracts visitors from all over the world to witness its breathtaking beauty.</li>
+                        </ul>
+                </div>
+
+            </div>
+
+            <div class="second">
+               
+
+                <div class="fact_">
+                    <h3>Santa Claus's Modern Look: A Coca-Cola Creation</h3>
+                    <h4>Did you know Santa’s famous red suit wasn’t always his signature look? Before the 1930s,
+                        Santa Claus was depicted wearing robes in colors like green, blue, or even brown.</h4>
+                    <ul>
+                        <li>The Coca-Cola Influence: The red-suited Santa we know today gained popularity 
+                            through Coca-Cola's iconic holiday advertisements starting in 1931.</li>
+                        <li>A Cultural Icon: Artist Haddon Sundblom created the cheerful, 
+                            jolly figure to complement Coca-Cola’s red branding, forever shaping how we see Santa.</li>
+                        <li>An Evolving Legend: Santa’s appearance has changed over centuries, influenced by different cultures and traditions.</li>
+                    </ul>
+                </div>
+
+                <img src="imagies/greensanta.png" alt="">
+
+            </div>
+
+
 
         </div>
 
@@ -78,14 +146,13 @@
     <footer>
 
         <div class="support">
-            <h2>Spread the Christmas joy! 🎄🎅</h2>
+            <h2>Help Santa Spread the Christmas joy! 🎄🎅</h2>
             <p><span>💰 Send via PayPal :</span> cjtech0000@gmail.com</a></p>
             <p><span>💎 Crypto Wallets:</span></p>
             <ul>
             <li><span>BTC:</span> bc1q5jsjmwve8tgwtcjl0re63lyzza2pm5hzeex08s</li>
             <li><span>ETH:</span> 0xA51FD63447a8A3b03e094Ef59349e2170F1349d3</li>
-            <li><span>XMR:</span> 47fWwEoDmvJXHxJZBDJmNygvGsyVi7VW5NuC6bP28oLjgUujD5KNQqegNQoUvA7XdyH84LPDvCTU4PzNz1hdzupQH1PfevY</li>
-            </ul>
+           </ul>
 
         </div>
 

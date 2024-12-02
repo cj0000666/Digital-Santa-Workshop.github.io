@@ -15,6 +15,7 @@
 }
 
 html{
+    margin: 0;
     overflow-x: hidden;
     overflow-y: scroll;
 
@@ -107,11 +108,11 @@ header img{
       width: 0; /* Start with no visible text */
     }
     60% {
-      width: 15ch; /* Reset the width to 0 to start typing again */
+      width: 14ch; /* Reset the width to 0 to start typing again */
     }
 
     100% {
-        width: 15ch; /* Reset the width to 0 to start typing again */
+        width: 14ch; /* Reset the width to 0 to start typing again */
       }
   }
 

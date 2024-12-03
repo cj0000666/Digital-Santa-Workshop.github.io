@@ -435,6 +435,7 @@ footer{
 
 .support ul{
     list-style: none;
+    overflow: auto;
 }
 
 .support h2{

@@ -1,7 +1,4 @@
 
-
-
-
       // Countdown Timer
 function updateCountdown() {
         const countdownday=document.getElementById('day')
@@ -133,5 +130,25 @@ container.appendChild(greetingLabel); // Add the message to the container
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+    }
+});
+
+
+
+
+// JavaScript to toggle visibility of sections
+document.getElementById("method-select").addEventListener("change", function() {
+    const paypalSection = document.getElementById("paypal-section");
+    const cryptoSection = document.getElementById("crypto-section");
+
+    // Hide both sections initially
+    paypalSection.style.display = "none";
+    cryptoSection.style.display = "none";
+
+    // Show the selected section
+    if (this.value === "paypal") {
+        paypalSection.style.display = "block";
+    } else if (this.value === "crypto") {
+        cryptoSection.style.display = "block";
     }
 });

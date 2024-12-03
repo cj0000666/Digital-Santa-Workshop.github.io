@@ -156,6 +156,51 @@ nav a:hover{
     
 }
 
+
+.welcome_banner{
+    width: 100%;
+    margin-top:7%;
+    text-align: center;
+    font-family: cursive;
+
+}
+
+.welcome_banner .welcome{
+    width: 80%;
+    border: outset 2px var(--accent-color);
+    border-radius: 12px;
+    margin: 50px auto;
+    position: relative;
+    
+}
+
+.welcome_banner .welcome .santa_hat {
+    
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 150px;
+    height: 150px;
+    background-image: url("../imagies/santa_hat.png"); /* Corrected syntax */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    background-position: center center; /* Centers the image */
+    background-size: contain; /* Scales the image to fit within the div */
+    z-index: 10;
+}
+
+
+
+.welcome_banner .welcome h1{
+ 
+    display: inline-block;
+    padding: 20px 10px;
+    color: var(--primary-color);
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 0 0 1px var(--primary-color);
+    
+}
+
 main{
     width: 100%;
     position: relative;
@@ -275,22 +320,26 @@ select, input{
     color: var(--th-color);
     text-shadow: 2px 3px 5px var(--accent-color);
     
+    
 }
 
 
 .fun_facts{
-    width: 100%;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border: outset 2px var(--primary-color);
+    border-radius: 15px;
+    margin: 20px auto;
 
 }
 
 
 .first, .second{
-    border: outset 2px var(--primary-color);
+    
     height: 100%;
-    border-radius: 15px;
+    
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -326,12 +375,11 @@ select, input{
     padding: 10px 10px;
 }
 
-.first div , .second div{
+.fact_{
     text-align: center;
-    color: var(--th-color);
+    color: var(--primary-color);
     font-family: 'Brush Script';
-    background-image: url('bgscroll.jpg');
-
+    border-radius: 15px;
 
 }
 
@@ -365,6 +413,7 @@ select, input{
     font-weight: bold;
     color: black;
     font-family: 'Brush Script';
+    text-shadow: 0 0 4px var(--primary-color)
 }
 
 footer{
@@ -372,55 +421,37 @@ footer{
 
 }
 
-.support{
-    width: 90%;
-    margin: 40px auto;
+.support {
+    font-family: "Brush Script";
+    padding: 20px;
     text-align: center;
-    font-family: 'Brush Script';
-    background-image: url('bgscroll.jpg');
-    border: outset 2px var(--primary-color);
-    border-radius: 15px;
-}
-
-.support h2{
-    font-size: 1.3em;
-    font-family: 'Brush Script';
-    color: var(--accent-color);
-    text-align: center;
-    text-shadow: 0 0 3px var(--th-color);
-    font-weight: 400;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    width: 80%;
+    margin: 20px auto;
+    
 }
 
 .support ul{
     list-style: none;
 }
 
-.support ul li span{
+.support h2{
+    font-size: 1.3em;
+}
+
+#method-select option{
+    font-size: 1em;
     font-family: cursive;
-    font-weight: 600;
-
-    
 }
 
-.support p span{
-    font-size: 1em;
-    font-family: 'Brush Script';
-    color: var(--accent-color);
-    text-shadow: 0 0 3px var(--th-color), 0 0 5px rgb(3, 3, 3);
+
+
+#paypal-section, #crypto-section {
+    margin-top: 10px;
 }
 
-.support ul li, .support p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    color: var(--th-color);
-    font-size: 1em;
-    font-weight: 400;
-    font-family: 'Brush Script';
-    overflow-wrap: break-word; /* Ensures long words break */
-    word-wrap: break-word; /* For older browser support */
-    line-height: 40px;
-    text-shadow: 0 0 2px black;
-}
 
 
 
@@ -499,6 +530,12 @@ animation: glow 5s infinite alternate;
 
 
 @media (max-width:1300px){
+
+    
+
+    .welcome_banner .welcome h1{
+        font-size: 2em;
+    }
     form{
         width: 90%;
     }
@@ -557,6 +594,14 @@ animation: glow 5s infinite alternate;
 }
 
 @media (max-width: 855px){
+
+    .welcome_banner .welcome{
+        margin-left: 15px;
+    }
+
+    .welcome_banner .welcome h1{
+        font-size: 1.8em;
+    }
 
     #intro_flowe{
         visibility: visible;
@@ -632,7 +677,6 @@ animation: glow 5s infinite alternate;
 
     .fun_facts{
         flex-direction: column;
-        width: 100%;
         margin-top: 7%;
         
     }
@@ -661,6 +705,8 @@ animation: glow 5s infinite alternate;
     height: 800px;
     gap: 20px; /* Adds space between the two sections */
     padding: 20px 2%;
+    margin: 10% 0;
+
     
 }
 
@@ -690,7 +736,7 @@ animation: glow 5s infinite alternate;
     display: flex;
     justify-content: center; /* Centers the image horizontally */
     align-items: center; /* Centers the image vertically */
-
+    
 }
 
 .jesus_facts .santa_show img {
@@ -748,6 +794,7 @@ animation: glow 5s infinite alternate;
 }
 
 
+
 @media (max-width:1100px){
 
     .jesus_facts {
@@ -762,7 +809,7 @@ animation: glow 5s infinite alternate;
     }
 
     .jesus_facts .facts{
-        width: 100%;
+        width: 94%;
     }
 
     .jesus_facts .santa_show{
@@ -782,5 +829,197 @@ animation: glow 5s infinite alternate;
     .facts .fact p{
         font-size: 1em;
     }
+
+}
+
+
+
+/* Gifts Styling*/
+
+.gifts_main{
+    position: relative;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 900px;
+    gap: 5%; /* Adds space between the two sections */
+    padding: 20px 2%;
+    margin: 10% auto;
+
+}
+
+.gifts_ideas_sugge{
+    width: 62%;
+    height: 100%; /* Ensures it fills the available height */
+    overflow-y: auto; /* Enables scrolling */
+    padding: 10px; /* Adds padding for readabi*/
+    background-color: var(--primary-color);
+    border-radius: 12px;
+}
+
+.gift_banner{
+    width: 35%;
+}
+
+
+.gift_banner img{
+    width: 70%;
+}
+
+.gifts_ideas_sugge .gift{
+    padding: 20px 10px;
+    margin: 20px 10;
+    width: 90%;
+    
+
+}
+
+.gifts_ideas_sugge h2{
+    font-size: 1.6em;
+    line-height: 50px;
+    
+}
+
+
+.gifts_ideas_sugge p{
+    font-size: 1.1em;
+    line-height: 30px;
+    
+}
+
+
+@media (max-width: 1200px){
+    .gifts_main{
+        width: 100%;
+    }
+
+    .gift_banner img{
+        width: 95%;
+    }
+    
+
+}
+
+@media (max-width: 900px){
+    .santa_gift{
+        display: none;
+    }
+    .gifts_main{
+        flex-direction: column;
+        
+    }
+
+    .gifts_ideas_sugge{
+        width: 95%;
+        height: 800px;
+    }
+
+    .gift_banner{
+        align-self: flex-start;
+        margin: 2px auto;
+    }
+    .gift_banner img{
+        width: 95%;
+    }
+    
+}
+
+
+/* Contact page style*/
+
+
+.contact_santa_main{
+    width: 100%;
+
+}
+
+.contact_santa{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7% auto;
+   
+}
+
+
+.contact_info{
+    width: 40%;
+    text-align: center;
+    border: 1px var(--accent-color) solid;
+    padding: 20px 30px;
+    border-radius: 12px;
+
+}
+
+.contact_info form{
+    width: 100%;
+    margin: 10px auto;
+}
+
+.contact_info h1{
+    font-size: 1.7em;
+    font-family: "Brush Script";
+    color:  var(--primary-color);
+}
+
+
+.contact_santa_image{
+    width: 50%;
+}
+
+.contact_santa_image img{
+    width: 100%;
+}
+
+.contact_info label{
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: 5px 9%;
+    color: var(--primary-color);
+}
+
+.contact_info input{
+    display: inline-block;
+    min-width: 50%;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin: 20px 0;
+}
+
+.contact_info textarea{
+    width: 100%;
+    line-height: 30px;
+    font-size: 1.4em;
+    font-family: "Brush Script";
+    border: none;
+    border-radius: 12px;
+    margin-top: 20px;
+    margin-bottom: 5%;
+    padding: 5px 7px;
+}
+
+/*Mobile resposiveness*/
+
+
+@media (max-width: 1200px){
+    .contact_santa{
+        flex-direction: column;
+    }
+
+    .contact_info , .contact_santa_image{
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+
+@media (max-width: 700px){
+    .contact_info input, .contact_info textarea{
+        font-size: 1.3em;
+    }
+
 
 }

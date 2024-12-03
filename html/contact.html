@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+         // Function to create snowflakes
+   document.addEventListener('DOMContentLoaded', () => {
+    // Function to create snowflakes
+    function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.textContent = '❄';   
+
+        // Randomize snowflake properties
+        const size = Math.random() * 1.5 + 0.5; // Size between 0.5em and 2em
+        const positionX = Math.random() * 95; // Horizontal starting position
+        const duration = Math.random() * 4 + 4; // Fall duration between 4s and 8s
+        const initialPositionY = Math.random() * -20 - 10; // Start above the screen
+
+        // Apply styles to the snowflake
+        snowflake.style.left = `${positionX}vw`;
+        snowflake.style.fontSize = `${size}em`;
+        snowflake.style.animationDuration = `${duration}s`;
+        snowflake.style.animationDelay = `${Math.random() * 2}s`; // Random delay
+        snowflake.style.top = `${initialPositionY}vh`;
+
+        // Append to body
+        document.body.appendChild(snowflake);
+
+        // Remove snowflake after its animation ends
+        setTimeout(() => {
+            snowflake.remove();
+        }, duration * 1000);
+    }
+
+    // Generate snowflakes continuously
+    setInterval(createSnowflake, 100); // Create a new snowflake every 100ms
+});
+
+    </script>
+    <title>Contact Santa</title>
+</head>
+<body>
+    <img src="../imagies/deco_flower.png" alt="" width="100px" id="intro_flowe">
+
+    <header>
+        <div class="logo">
+            <img src="../imagies/ch1.png" alt="logo" >
+
+            <div class="counter">
+    
+                <div class="countdown" id="countdown">
+                    <h3 class="day" id="day"></h3>
+                   
+                    <h2>TO CHRISTMAS</h2>
+                </div>
+            </div>
+
+        </div>
+
+
+        <nav class="navbar">
+          
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../html/christmas.html">Christmas</a>
+                <a href="../html/gifts.html">Gift</a>
+                <a href="../html/contact.html">Contact</a>
+            </div>
+          
+        </nav>
+        
+    </header>
+
+    <section class="welcome_banner">
+        
+        <div class="welcome">
+            <div class="santa_hat">
+
+            </div>
+            <h1>Santa's inbox is open—drop me a message!</h1>
+        </div>
+
+    </section>
+
+    <main class="contact_santa_main">
+
+        <div class="contact_santa">
+            <section class="contact_info">
+                <h1>Send a Message.</h1>
+                <form action="">
+                    <label for="username">Name</label>
+                    <input type="text" id="username" class="username"><br>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email"><br>
+
+                    <label for="message">Message</label><br>
+                    <textarea name="message" id="message" class="message"></textarea><br>
+
+
+                    <button type="submit" id="submit">Submit</button>
+                    
+                </form>
+
+            </section>
+
+            <section class="contact_santa_image">
+                <img src="../imagies/chat_santa.png" alt="">
+
+            </section>
+        </div>
+
+    </main>
+
+
+
+
+
+
+    <footer>
+
+
+        <div class="social">
+            <a href="https://www.instagram.com/cj00083" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61569416407056&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@cj000083?_t=8rplR7Fz4BL&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></i></a>
+            <a href="https://www.youtube.com/channel/UCPWlzJczIbAbBdTNfAN30Hw" target="_blank"><i class="fa-brands fa-youtube"></i></a> 
+        </div>
+
+
+    </footer>
+    <script src="../js/main.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+         // Function to create snowflakes
+   document.addEventListener('DOMContentLoaded', () => {
+    // Function to create snowflakes
+    function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.textContent = '❄';   
+
+        // Randomize snowflake properties
+        const size = Math.random() * 1.5 + 0.5; // Size between 0.5em and 2em
+        const positionX = Math.random() * 95; // Horizontal starting position
+        const duration = Math.random() * 4 + 4; // Fall duration between 4s and 8s
+        const initialPositionY = Math.random() * -20 - 10; // Start above the screen
+
+        // Apply styles to the snowflake
+        snowflake.style.left = `${positionX}vw`;
+        snowflake.style.fontSize = `${size}em`;
+        snowflake.style.animationDuration = `${duration}s`;
+        snowflake.style.animationDelay = `${Math.random() * 2}s`; // Random delay
+        snowflake.style.top = `${initialPositionY}vh`;
+
+        // Append to body
+        document.body.appendChild(snowflake);
+
+        // Remove snowflake after its animation ends
+        setTimeout(() => {
+            snowflake.remove();
+        }, duration * 1000);
+    }
+
+    // Generate snowflakes continuously
+    setInterval(createSnowflake, 100); // Create a new snowflake every 100ms
+});
+
+    </script>
+    <title>Gifts Ideas</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../imagies/ch1.png" alt="logo" >
+
+            <div class="counter">
+    
+                <div class="countdown" id="countdown">
+                    <h3 class="day" id="day"></h3>
+                   
+                    <h2>TO CHRISTMAS</h2>
+                </div>
+            </div>
+
+        </div>
+
+
+        <nav class="navbar">
+          
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../html/christmas.html">Christmas</a>
+                <a href="../html/gifts.html">Gift</a>
+                <a href="../html/contact.html">Contact</a>
+            </div>
+          
+        </nav>
+        
+    </header>
+
+    <section class="welcome_banner">
+        
+        <div class="welcome">
+            <div class="santa_hat">
+
+            </div>
+            <h1>Find the best Christmas gift ideas and suggestions for everyone on your list!</h1>
+        </div>
+
+    </section>
+
+
+
+    <main class="gifts_main">
+
+        
+
+        <section class="gifts_ideas_sugge">
+            <div class="gift">
+                <h2>Christmas Gifts for Tech Enthusiasts</h2>
+                <p>Finding the perfect Christmas gift for a tech lover can feel like solving a 
+                    puzzle, but the payoff is worth it. This season, consider cutting-edge gadgets 
+                    that blend innovation and practicality. Start with smart home devices like 
+                    voice-controlled assistants (e.g., Amazon Echo or Google Nest) that add 
+                    convenience to everyday life. Wireless earbuds such as Apple AirPods or Bose
+                     QuietComfort make excellent gifts for music lovers and multitaskers. Gamers 
+                     will appreciate the latest consoles like the PlayStation 5 or Nintendo Switch 
+                     OLED, while creative types may enjoy a drawing tablet like Wacom Intuos.
+                      For fitness enthusiasts, a smartwatch such as the Apple Watch Series 9 or 
+                      Fitbit Versa is a thoughtful choice. Don't forget about virtual reality
+                       headsets like the Meta Quest 3, which are perfect for immersive gaming and entertainment.
+                    No matter the choice, these gifts are bound to excite any tech enthusiast.</p>
+            </div>
+
+
+            <div class="gift">
+                <h2> Thoughtful Christmas Gifts for Her</h2>
+                <p>Christmas is the perfect time to show the special women in your life how much they mean to you.
+                     Thoughtful gifts tailored to their interests and lifestyles go a long way. A luxurious skincare set is perfect
+                      for someone who loves pampering herself. Jewelry, whether it's a personalized pendant or stylish earrings,
+                       never goes out of style. For the homebody, consider cozy loungewear or a weighted blanket for ultimate
+                        relaxation. Bookworms will appreciate a Kindle or a subscription to a book club. For the adventurer, 
+                        a travel journal or a chic weekender bag is a great idea. Other thoughtful gifts include custom photo albums, scented candles with unique fragrances, 
+                    or subscription boxes tailored to her hobbies. The right gift will remind her how much she's appreciated and loved.</p>
+            </div>
+
+
+            <div class="gift">
+                <h2> Best Christmas Gifts for Him</h2>
+                <p>Finding the ideal gift for the men in your life can be tricky, but this list makes it easier.
+                     A quality smartwatch, such as the Samsung Galaxy Watch, is perfect for tech-savvy individuals.
+                      For the outdoorsman, a durable multi-tool or a camping gear set is both practical and thoughtful.
+                       Fitness enthusiasts will love a set of adjustable dumbbells or a fitness tracker. Stylish yet 
+                       functional gifts like a leather wallet, classy cufflinks, or a sleek backpack are great for professionals.
+                        Tech lovers may enjoy noise-canceling headphones, while gaming enthusiasts would cherish accessories like
+                         a gaming mouse or a VR headset. Other ideas include premium grooming kits, personalized whiskey glasses,
+                     or tickets to his favorite sports event. These gifts show you’ve put thought into what he’ll love.</p>
+            </div>
+
+
+            <div class="gift">
+                <h2>Must-Have Christmas Toys for Kids</h2>
+                <p>Christmas is all about creating magical memories for kids, and the right toys make the season unforgettable. 
+                    This year, STEM toys like LEGO Robotics or Osmo educational kits are perfect for blending fun with learning.
+                     For creative kids, art supplies such as Crayola Ultimate Creativity Sets are ideal. Dolls and action figures
+                      from popular franchises like Barbie or Marvel continue to be timeless favorites. Interactive toys like Tamagotchi
+                       Pix or FurReal Friends bring characters to life, while board games such as Monopoly Junior are great for family bonding.
+                        For outdoor fun, consider scooters, mini drones, or even a trampoline. Tech-savvy kids will adore tablets designed for children,
+                         like the Amazon Fire Kids Edition. 
+                    These gifts spark joy and creativity, making them the stars of Christmas morning.</p>
+            </div>
+
+
+            <div class="gift">
+                <h2>Unique Christmas Gifts for Couples</h2>
+                <p>Finding a gift that celebrates two people at once can be challenging, but this list has you covered. 
+                    Matching items like cozy his-and-hers pajamas or monogrammed mugs make for delightful surprises. Customized 
+                    photo frames or canvas prints capturing cherished moments are thoughtful options. For adventurous
+                     couples, gift an experience like a hot air balloon ride or a cooking class. Subscription services,
+                      such as a wine or meal kit delivery, offer joy that lasts beyond the holidays. Romantic gifts
+                       like engraved lockets or couple’s bracelets add a personal touch. Tech-savvy couples might love a
+                        smart home starter kit or an interactive digital photo frame. Other unique ideas include scratch-off travel maps,
+                     board games for two, or tickets to a concert or show. Celebrate love with gifts they’ll enjoy together.</p>
+            </div>
+
+
+            <div class="gift">
+                <h2> Best Christmas Gifts for Book Lovers</h2>
+                <p>Bookworms deserve special attention during Christmas. This blog dives into gifts that go beyond just books. 
+                    Consider gifting beautifully bound classics or the latest bestsellers in their favorite genre.
+                     A Kindle Paperwhite makes a perfect gift for digital readers, while personalized bookmarks add
+                      a unique touch. Cozy gifts like reading socks or a plush throw blanket enhance the reading experience. 
+                      For those who love book-related decor, bookends or literary-themed candles are great options. 
+                      A book subscription box, such as Book of the Month, ensures they always have something new to read.
+                       Journals for tracking books read or writing reflections can also make thoughtful gifts. 
+                       These ideas will warm any bibliophile’s heart and keep their love for books alive.
+
+                </p>
+            </div>
+
+
+            <div class="gift">
+                <h2>Budget-Friendly Christmas Gifts Under $50</h2>
+                <p>Being on a budget doesn’t mean you can’t give meaningful Christmas gifts. DIY kits, like candle-making or painting sets,
+                     are thoughtful and affordable. Personalized gifts, such as engraved keychains or photo ornaments, make for heartfelt keepsakes.
+                      Small tech gadgets like portable phone chargers or Bluetooth speakers offer great value. Food lovers will appreciate gourmet 
+                      gift baskets or handmade cookie jars. Other ideas include planners, cozy scarves, or unique board games. For those who enjoy relaxation,
+                       consider bath bombs or essential oil sets. Fitness enthusiasts will love resistance bands or water bottles with motivational quotes.
+                     These thoughtful yet affordable gifts prove that giving from the heart matters more than the price tag.</p>
+            </div>
+
+
+            <div class="gift">
+                <h2>Sustainable Christmas Gifts for an Eco-Friendly Holiday</h2>
+                <p>Celebrate Christmas sustainably with eco-friendly gifts that make a positive impact. 
+                    Reusable products like stainless steel water bottles, bamboo utensils, or shopping bags 
+                    are practical and environmentally friendly. Consider gifting biodegradable planters or DIY 
+                    herb garden kits for green thumbs. For skincare lovers, natural and organic products in recyclable
+                     packaging are perfect. Tech enthusiasts will appreciate solar-powered gadgets. Upcycled goods, 
+                     such as wallets made from recycled materials, add a creative touch. Subscription services to eco-conscious 
+                     brands or donations to environmental causes also make thoughtful gifts. By choosing sustainable gifts, 
+                     you spread holiday cheer while caring for the planet.
+
+                </p>
+            </div>
+
+
+            <div class="gift">
+                <h2>Luxurious Christmas Gifts for a Lavish Holiday</h2>
+                <p>For those who enjoy the finer things, luxurious Christmas gifts are the way to go. 
+                    High-end items like designer handbags or premium perfumes make unforgettable statements.
+                     Tech lovers will adore the latest iPhone or noise-canceling headphones from Bose. Jewelry, 
+                     such as diamond earrings or gold bracelets, exudes sophistication. For wine connoisseurs, 
+                     a bottle of vintage wine or a luxury decanter set is ideal. Cozy yet lavish gifts like cashmere 
+                     throws or silk robes make for indulgent experiences. Other ideas include spa packages, gourmet food baskets, or exclusive memberships to clubs. 
+                    These opulent gifts are perfect for creating a lavish holiday celebration.</p>
+            </div>
+
+
+            <div class="gift">
+                <h2>Personalized Christmas Gifts to Make It Memorable</h2>
+                <p>Personalized gifts add a meaningful touch to Christmas giving. Start with custom photo albums or 
+                    calendars filled with cherished memories. Engraved jewelry, like bracelets with initials or lockets with 
+                    photos, makes a heartfelt choice. Home decor items such as custom pillows or wall art allow recipients to showcase 
+                    their style. For practical yet personalized gifts, consider monogrammed tote bags or mugs. 
+                    Tech-savvy individuals will love custom phone cases or engraved USB drives. You could also opt for
+                     personalized games, such as puzzles featuring family photos.
+                     These unique gifts reflect thoughtfulness, making this Christmas truly unforgettable.</p>
+            </div>
+
+
+
+        </section>
+
+        <div class="gift_banner">
+            <img src="../imagies/sanat_gift.png" alt="" class="santa_gift">
+            <img src="../imagies/vip_gift.png" alt="">
+        </div>
+    </main>
+
+
+
+
+
+
+
+    <footer>
+
+
+        <div class="social">
+            <a href="https://www.instagram.com/cj00083" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61569416407056&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@cj000083?_t=8rplR7Fz4BL&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></i></a>
+            <a href="https://www.youtube.com/channel/UCPWlzJczIbAbBdTNfAN30Hw" target="_blank"><i class="fa-brands fa-youtube"></i></a> 
+        </div>
+
+
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
